@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeepTrack</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <!-- Authentication Section -->
-    <div id="auth-section">
-      <h1>To-Do List App</h1>
+    <div id="app">
+        <!-- Authentication Section -->
+        <div id="auth-section">
+            <h1>KeepTrack App</h1>
 
-      <!-- Login Form (Initially shown) -->
-      <form id="login-form">
-        <h2>Login</h2>
-        <input type="text" id="login-username" placeholder="Username" required autocomplete="username">
-        <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
-        <button type="submit">Login</button>
-        <p>Don't have an account? <a href="#" id="show-register" class="toggle-link">Register here</a></p>
-      </form>
+            <!-- Login Form (Initially shown) -->
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username" required autocomplete="username">
+                <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-register" class="toggle-link">Register here</a></p>
+            </form>
 
-      <!-- Register Form (Initially hidden) -->
-      <form id="register-form" class="hidden">
-        <h2>Register</h2>
-        <input type="text" id="register-username" placeholder="Username" required autocomplete="username">
-        <input type="password" id="register-password" placeholder="Password" required autocomplete="new-password">
-        <button type="submit">Register</button>
-        <p>Already have an account? <a href="#" id="show-login" class="toggle-link">Login here</a></p>
-      </form>
+            <!-- Register Form (Initially hidden) -->
+            <form id="register-form" class="hidden">
+                <h2>Register</h2>
+                <input type="text" id="register-username" placeholder="Username" required autocomplete="username">
+                <input type="password" id="register-password" placeholder="Password" required autocomplete="new-password">
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#" id="show-login" class="toggle-link">Login here</a></p>
+            </form>
+        </div>
+
+        <!-- To-Do List Section (Hidden until login) -->
+        <div id="todo-section" class="hidden">
+            <h1>Welcome, <span id="user-name"></span>!</h1>
+            <button id="logout-btn">Logout</button>
+
+            <!-- Task Input Section -->
+            <div id="task-input">
+                <input type="text" id="new-task" placeholder="Enter new task" required>
+                <select id="new-category">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button id="add-task-btn">Add Task</button>
+            </div>
+
+            <!-- Task List -->
+            <div id="task-list"></div>
+        </div>
     </div>
 
-    <!-- To-Do List Section (Hidden until login) -->
-    <div id="todo-section" class="hidden">
-      <h1>Welcome, <span id="user-name"></span>!</h1>
-      <button id="logout-btn">Logout</button>
-
-      <!-- Task Input Section -->
-      <div id="task-input">
-        <input type="text" id="new-task" placeholder="Enter new task" required>
-        <select id="new-category">
-          <option value="Work">Work</option>
-          <option value="Personal">Personal</option>
-          <option value="Other">Other</option>
-        </select>
-        <button id="add-task-btn">Add Task</button>
-      </div>
-
-      <!-- Task List -->
-      <div id="task-list"></div>
-    </div>
-  </div>
-
-  <!-- Linking to the frontend script -->
-  <script src="app.js"></script>
+    <!-- Linking to the frontend script -->
+    <script src="app.js"></script>
 </body>
 </html>

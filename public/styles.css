@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #1c1c2b 0%, #1d1d7e 100%); /* Dark gradient background */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,49 +10,68 @@ body {
 }
 
 #app {
-    width: 350px;
-    background-color: white;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Set a maximum width */
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+#app:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4); /* Shadow effect on hover */
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Increased font size for headings */
     text-align: center;
-    color: #333;
+    color: #0a0a0a; /* White color for better contrast on dark background */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
-form, .task-input, .task-item {
+form,
+.task-input,
+.task-item {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px; /* Increased gap for better spacing */
 }
 
-input, select, button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+input,
+select,
+button {
+    padding: 12px;
+    border-radius: 8px; /* Softer corner radius */
+    border: 1px solid #ccc; /* Lighter border color */
     font-size: 1rem;
 }
 
+input:focus,
+select:focus {
+    border-color: #8e44ad; /* Purple border on focus */
+    outline: none; /* Remove default outline */
+}
+
 button {
-    background-color: #28a745;
+    background-color: #6a58a8; /* Orange color for buttons */
     color: white;
     cursor: pointer;
     border: none;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for button hover */
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #e64a19; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 #logout-btn {
-    background-color: #dc3545;
+    background-color: #6a58a8; /* Purple color for logout */
 }
 
 #logout-btn:hover {
-    background-color: #c82333;
+    background-color: #6a58a8; /* Darker purple on hover */
 }
 
 .hidden {
@@ -60,31 +79,36 @@ button:hover {
 }
 
 .error {
-    color: red;
+    color: #ff0000; /* Consistent error color */
     text-align: center;
 }
 
 .task-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px; /* Rounded corners for task items */
+    background-color: #f1f1f1; /* Light background for tasks */
+    border: 1px solid #eaeaea; /* Subtle border for task items */
+    margin-bottom: 8px; /* Space below each task item */
 }
 
 .complete-btn {
-    background-color: #007bff;
+    background-color: #6a58a8; /* Yellow for complete button */
     color: white;
+    border-radius: 5px; /* Softer button corners */
 }
 
 .complete-btn:hover {
-    background-color: #0056b3;
+    background-color: #ffca28; /* Darker yellow on hover */
 }
 
 .delete-btn {
-    background-color: #dc3545;
+    background-color: #13b96c; /* Orange color for delete button */
     color: white;
+    border-radius: 5px; /* Softer button corners */
 }
 
 .delete-btn:hover {
-    background-color: #c82333;
+    background-color: #d84315; /* Darker orange on hover */
 }
